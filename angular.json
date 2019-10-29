@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pwa": {
+    "pwa-angular8": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pwa",
+            "outputPath": "dist/pwa-angular8",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pwa:build"
+            "browserTarget": "pwa-angular8:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pwa:build:production"
+              "browserTarget": "pwa-angular8:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pwa:build"
+            "browserTarget": "pwa-angular8:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "pwa:serve"
+            "devServerTarget": "pwa-angular8:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pwa:serve:production"
+              "devServerTarget": "pwa-angular8:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "pwa"
+  "defaultProject": "pwa-angular8"
 }
